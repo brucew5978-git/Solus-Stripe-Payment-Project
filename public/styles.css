@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*Imports a font*/
+
+/*
+@font-face {
+    font-family: Goldman;
+    src: url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+/* Used for Title of Page */
+
+* 
+{
+    box-sizing: border-box;
+    /* "border-box" accounts for padding when creating a box. (Box will not be bigger than intended)*/
+    font-family: Roboto;
+
+    color:  rgb(167, 23, 23);
+    /*Changes color of text*/
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    /* reduces the space btw the image and the edges of the browser window */
+}
+
+.nav ul{
+    margin: 0;
+    /*Reduces the margin for the nav ul portion of the screen*/
+}
+
+.nav li {
+    display: inline;
+    /* "inline" displays all navigation tabs on single line*/
+}
+
+.nav a {
+    display: inline-block;
+    /* "inline-block" adds padding to the top and bottom of the nav links*/
+
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+    /* "text-decoration: none" removes the underline of the nav links */
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighten;
+    border-bottom: 1px solid rgba(238, 230, 230, 0.3);
+    /* Centers and enhances nav buttons */
+}
+
+.main-nav li {
+    padding: 0 5%;
+    /* provides padding of 0 for top/bottom and 5% for left/right. (more spaced out)*/
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    /* Provides feedback by changing the color behind the icons when user hovers over icons*/
+}
+
+.mainHeader{
+    background-image: url("Images/Mass\ Effect\ Omega\ 2.jpg");    
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    /*"multiply blends both the background image and the background color together. (Results in darker image)"*/
+    background-size: cover;
+    
+    padding-bottom: 30px;
+    /* "padding" adds a certain amount of space to the image*/
+
+    /* "cover" allows image to expand either as wide as it can or as tall as it can.
+        (Image will grow or shrink according to the size of the browser window)*/
+}
+
+.titleName {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: Goldman;
+    font-weight: normal;
+    color: rgb(167, 23, 23);
+}
+
+.titleNameLarge {
+    font-size: 4em;
+}
+
+.contentSection {
+    
+    margin: 1em;
+
+
+    margin-bottom: 1em;
+}
+
+.container {
+    max-width:  900px;
+    margin: 0 auto;
+    /* creates buffer space for text in "about" page*/
+
+    padding: 0 1.5em;
+    font-size: 135%;
+}
+
+/* Added background color for body section (anomaly) */
+
+
+.bodyBackground {
+    background-image: url("Images/Mass\ Effect\ Solus\ Clinic.jpg");
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    /*
+    background-color: rgb(66, 29, 4);
+    background-size: cover; 
+    */
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+
+.locationBackground {
+    background-image: url("Images/Mass\ Effect\ Medical\ Bay.jpg");
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    /*
+    background-color: rgb(66, 29, 4);
+    background-size: cover; 
+    */
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+        
+}
+
+
+.sectionHeader {
+    font-family: Goldman;
+    font-weight: normal;
+    color: rgb(167, 23, 23);
+    text-align: center;
+    font-size: 2em;
+}
+
+.aboutImage {
+    /*
+    float: left;
+     "float" allows text to go around the image from the left
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+    border-radius: 50%;
+        Curves image
+
+    */
+
+}
+
+.bodyText {
+    font-size: 110%;
+}
+
+.mainFooter {
+    background-color: rgba(39, 13, 5, 0.95);
+    color: rgb(167, 23, 23);
+    padding: 0.25em 0;
+}
+
+.mainFooterContainer {
+    display: flex;
+    align-items: center;
+}
+
+.mainFooterContainer ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footerNav li {
+    padding: 0 0.5em;
+}
+
+.footerNav img {
+    width: 30px;
+    height: 30px;
+}
+
+/* CSS for "Index" page*/
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.67em;
+    cursor: pointer;
+    /* Changes user's mouse cursor from arrow to pointer when user hovers over button*/
+}
+
+.btnHeader {
+    margin: 0.5em 15% 2em 15%;
+    /* Offsets button location */
+
+    color: white;
+    border: 2px solid rgb(167, 23, 23);
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighten;
+    padding-left: 2em;
+    padding-right: 2em;
+    /* Button graphics */
+}
+
+.btnHeader:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.btnPlay {
+    display: block;
+    margin: 0 auto;
+    /* Adjusts play-button location*/
+
+    color: rgb(167, 23, 23);
+    font-size: 4em;
+    border-radius: 50%;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    /* adjust shape of button */
+}
+
+.clinicRow {
+    border-bottom: 1px solid rgb(131, 127, 127);
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.clinicRow:last-child {
+    border-bottom: none;
+    /* Removes border for the last row of clinic locations */ 
+}
+
+.clinicItem {
+    display: inline-block;
+    /* Have to change element type in order to make adjustments */
+
+    padding-right: 0.5em;
+    
+}
+
+.clinicLocation {
+    color:  rgb(167, 23, 23);
+    font-weight: bold;
+    /* Visually bolds the clinic locations*/
+    
+    width: 20%;
+    /* Creates a space btw the "Clinic Location" and "local star cluster"*/ 
+}
+
+.clinicStarCluster {
+    width: 24%;
+}
+
+.clinicType {
+    width: 33%;
+}
+
+.clinicButton {
+    max-width: 19%;
+}
+
+.btnPrimary {
+    color:  rgb(167, 23, 23);
+    background-color:  rgb(226, 224, 224);
+    
+    border: none;
+    border-radius: 0.1em;
+    /* deletes previous border and adds slightly rounded borders around buttons*/
+
+    font-weight: bold;
+}
+
+.btnPrimary:hover {
+    background-color: rgb(170, 166, 166);
+}
+
+/* Note that all width combine is < 100% bc have to account for unchangeable padding added
+    by the "inline-block" element in "clinicItem"
+    
+    Subtracted 1% from each width so 96% total width
+*/
+
+
+/* Shop page */
+
+.shopItem {
+    margin: 30px;
+}
+
+.shopItemTitle {
+    display: block;
+    /* "display: block" makes item on its own line */
+
+    width: 100%;
+    text-align: center;
+    /* properly places text */
+
+    font-weight: bold;
+    font-size: 1.25em;
+    color: rgb(167, 23, 23);
+    margin-bottom: 15px;
+}
+
+.shopItemImage {
+    height: 250px;
+    width: 350px;
+}
+
+.shopItemDetail{
+    display: flex;
+    align-items: center;
+    /* properly aligns text and button */
+
+    padding: 5px;
+}
+
+.shopItemPrice {
+    flex-grow: 1;
+    color: rgb(167, 23, 23);
+}
+
+.shopItems { /* Note: not the same as "shopItem" */
+    display: flex;
+    /* moves everything into one horizontal line*/
+
+    flex-wrap: wrap;
+    /* makes line wrap around the web page */
+
+    justify-content: space-around;
+    /* creates space around each item */
+}
+
+.shopMedicalBackground {
+    background-image: url("Images/Mass\ Effect\ Medical\ Shop.png");
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    /*
+    background-color: rgb(66, 29, 4);
+    background-size: cover; 
+    */
+    
+    padding-top: 30px;
+    padding-bottom: 30px;     
+}
+
+.shopGeneralBackground {
+    background-image: url("Images/Mass\ Effect\ Omega\ Shop.jpg");
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    /*
+    background-color: rgb(66, 29, 4);
+    background-size: cover; 
+    */
+    
+    padding-top: 30px;
+    padding-bottom: 30px; 
+}
+
+.cartHeader {
+    font-weight: bold;
+    font-size: 1.2em;
+    color:  rgb(167, 23, 23);
+}
+
+.cartColumn {
+    display: flex;
+    align-items: center;
+    /* Aligns text to center between rows */
+
+    border-bottom: 2px solid rgb(104, 16, 16);
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cartRow {
+    display: flex;
+}
+
+.cartItem {
+    width: 33%;
+}
+
+.cartPrice {
+    width: 33%;
+
+    font-size: 1.2em;
+    color:  rgb(167, 23, 23);
+}
+
+.cartQuantity {
+    width: 34%;
+}
+
+.cartItemTitle {
+    color:  rgb(167, 23, 23);
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cartItemImage {
+    width: 75px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.btnDanger {
+    color: white;
+    background-color:  rgb(119, 18, 18);
+    border: none;
+    border-radius: 0.3em;
+    font-weight: bold;
+}
+
+.btnDanger:hover {
+    background-color:  rgb(167, 23, 23);
+}
+
+.cartQuantityInput {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid  rgb(167, 23, 23);
+    background-color: rgb(218, 216, 216);
+    color: #333;
+    padding: 0;
+    text-align: 1.2em;
+    margin-right: 25px;
+}
+
+.cartRow:last-child {
+    border-bottom: 2px solid rgb(119, 18, 18);
+}
+
+.cartRow:last-child .cartColumn {
+    border: none;
+}
+
+.cartTotal {
+    text-align: end;
+
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cartTotalTitle {
+    font-weight: bold;
+    font-size: 1.5em;
+    color:  rgb(167, 23, 23);
+    margin-right: 20px;
+}
+
+.cartTotalPrice {
+    color:  rgb(211, 34, 34);
+    font-size: 1.1em;
+}
+
+.btnPurchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.5em;
+}
+
+.storeBackground {
+    background-color: black;
+}
+
+.cartBackground {
+    background-image: url("Images/Mass\ Effect\ Illium\ Kiosk.jpg");
+    background-color: rgba(0, 0, 0, .7);
+    background-blend-mode: multiply;
+    background-size: cover;
+    /*
+    background-color: rgb(66, 29, 4);
+    background-size: cover; 
+    */
+    
+    padding-top: 30px;
+    padding-bottom: 30px; 
+}
+
+/* Note: as using "flex-box", width adds up to 100%*/
+
+/*
+html{
+    background-color: red;
+}
+
+    Sets etire background of html to red
+*/

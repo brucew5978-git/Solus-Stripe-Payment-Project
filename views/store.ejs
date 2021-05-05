@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>     
+        <title>Solus M.D.| About</title>
+        <meta name="description" content="This is the description">
+        <link rel = "stylesheet" href = "styles.css">
+
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripePublicKey = "<%= stripePublicKey %>"  
+        </script>
+        <!--Recieves "stripePublicKey" from "server.js"-->
+        <script src="store.js" defer></script>
+        <!-- 
+            Includes the javaScript file for the website
+            
+            "async" allows the javaScript file to load in the background while the rest of the website is loading.
+            This is important as javaScript files will take priority and must be loaded before anything else can be loaded
+        
+            
+            *Note: "async" now replaced by "defer" for ejs file, used as need "checkout.js" to load first 
+            [ <script src="store.js" async></script> ] = original
+        -->
+    </head>
+    <body>
+        <header class="mainHeader">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href = "index.html">HOME</a></li>
+                    <li><a href = "http://localhost:3000/store">STORE</a></li>
+                    <li><a href = "about.html">ABOUT</a></li>
+                    <!-- "li" are points, they are styled with bullet points in ul and numbers in ordered lists-->
+                </ul>
+                <!-- "ul" is Unordered List. As the home and other buttons do not need to be in any order, ul is used-->
+            </nav>
+            <!-- "nav" is Navigation bar-->
+            <!-- Used for horizontal elements--> 
+            <h1 class="titleName titleNameLarge">Mordin Solus M.D.</h1>
+            <!-- "h1" is a type of header. For ex, "h2" would show up with smaller texts than "h1"-->
+
+            <br>
+            <br>
+            <br>
+
+        </header>
+
+        <section class="storeBackground">
+            <section class="container contentSection shopMedicalBackground">
+                <h2 class="sectionHeader">Medical Supplies</h2>
+                <div class="shopItems">
+                    <% items.medical_supplies.forEach(function(item) {%>
+                    <!--
+                        Note: All content within "< % % >" will first be executed before being sent to the front end/user
+                        Also, "< %=" will also first render to the screen
+                    -->
+                        <div class="shopItem" data-item-id="<%= item.id %>">
+                            <span class="shopItemTitle"><%= item.name %> </span>
+                            <img class="shopItemImage" src = "Images/<%= item.imgName %>">
+                            <!--Note: Have replaced all direct file names with variable names from "items.json"-->
+                            <div class="shopItemDetail">
+                                <span class="shopItemPrice"><%= item.price %> Credits</span>
+                                <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                            </div>
+                        </div>
+
+                        <!--
+                        <div class="shopItem">
+                            <span class="shopItemTitle">STG Research Data</span>
+                            <img class="shopItemImage" src = "Images/Mass Effect Datapad.jpg">
+                            <div class="shopItemDetail">
+                                <span class="shopItemPrice">1000000 Credits</span>
+                                <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                            </div>                
+                        </div>
+
+                        Items are commented out as loop will go through all items in "items.json"
+
+                        -->
+                    <% }) %>
+                </div>
+        
+            </section>
+
+            <br>
+            <br>
+            <br>
+
+            <section class="container contentSection shopGeneralBackground">
+                <h2 class="sectionHeader">General Supplies</h2>
+                <div class="shopItems">
+                    <!--
+                    <div class="shopItem">
+                        <span class="shopItemTitle">Thermal Clips</span>
+                        <img class="shopItemImage" src = "Images/Mass Effect Thermal Clip.png">
+                        <div class="shopItemDetail">
+                            <span class="shopItemPrice">500 Credits</span>
+                            <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                        </div>                    
+                    </div>
+
+                    <div class="shopItem">
+                        <span class="shopItemTitle">M-5 Phalanx</span>
+                        <img class="shopItemImage" src = "Images/Mass Effect M-3 Phalanx.png">
+                        <div class="shopItemDetail">
+                            <span class="shopItemPrice">10000 Credits</span>
+                            <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                        </div>
+                    </div>
+                    -->                
+
+                    <% items.general_supplies.forEach(function(item) {%>
+                        <!--
+                            Note: All content within "< % % >" will first be executed before being sent to the front end/user
+                            Also, "< %=" will also first render to the screen
+                        -->
+                            <div class="shopItem" data-item-id="<%= item.id %>">
+                                <span class="shopItemTitle"><%= item.name %> </span>
+                                <img class="shopItemImage" src = "Images/<%= item.imgName %>">
+                                <!--Note: Have replaced all direct file names with variable names from "items.json"-->
+                                <div class="shopItemDetail">
+                                    <span class="shopItemPrice"><%= item.price %> Credits</span>
+                                    <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                                </div>
+                            </div>
+
+                            <!--
+                            <div class="shopItem">
+                                <span class="shopItemTitle">STG Research Data</span>
+                                <img class="shopItemImage" src = "Images/Mass Effect Datapad.jpg">
+                                <div class="shopItemDetail">
+                                    <span class="shopItemPrice">1000000 Credits</span>
+                                    <button class="btn btnPrimary shopItemButton" role = "button">PURCHASE</button>
+                                </div>                
+                            </div>
+
+                            Items are commented out as loop will go through all items in "items.json"
+
+                            -->
+                        
+                    <% }) %>
+                </div>
+            </section>              
+            
+            <section class="cartBackground">
+                <section class="container contentSection">
+                    <h2 class="sectionHeader">CART</h2>
+                    <div class="cartRow">
+                        <span class="cartItem cartHeader cartColumn">ITEM</span>
+                        <span class="cartItem cartHeader cartColumn">PRICE</span>
+                        <span class="cartItem cartHeader cartColumn">QUANTITY</span>
+                    </div>
+
+                   
+                    <div class="cartItems">
+
+                        <!--
+                        <div class="cartRow">
+                            <div class="cartItem cartColumn">
+                                <img class="cartItemImage" src = "Mass Effect Medi-Gel 2.png" width = "100" height= "100">
+                                 "width" and "height" sets dimensions
+
+                                <span class="cartItemTitle">Medi-Gel</span>
+                            </div>
+                            <span class="cartPrice cartColumn">50 Credits</span>
+
+                            <div class="cartQuantity cartColumn">
+                                <input class="cartQuantityInput" type = "number" value = "1"> 
+                                 Only allows input of numbers
+                                    Note: "value" presets an input number
+ 
+                                <button class="btn btnDanger" type="button">
+                                    REMOVE
+                                </button>
+                            </div>      
+
+                        </div>
+                        
+                        <div class="cartRow">
+                            
+                            <div class="cartItem cartColumn">
+                                <img class="cartItemImage" src = "Mass Effect Thermal Clip 2.png" width = "100" height= "100">
+                                 "width" and "height" sets dimensions
+
+                                <span class="cartItemTitle">Thermal Clips</span>
+                            </div>
+                            <span class="cartPrice cartColumn">500 Credits</span>
+
+                            <div class="cartQuantity cartColumn">
+                                <input class="cartQuantityInput" type = "number" value = "1"> 
+                                 Only allows input of numbers
+                                    Note: "value" presets an input number
+                                 
+                                <button class="btn btnDanger" type="button">
+                                    REMOVE
+                                </button>
+                            </div>      
+                            
+                        </div> 
+                        -->
+                    </div>
+                    
+
+                    <div class="cartTotal">
+                        <strong class="cartTotalTitle">Total: </strong>
+                        <span class="cartTotalPrice">0 Credits</span>
+                    </div>
+                        <button class="btn btnPrimary btnPurchase" role = "button">PURCHASE</button>
+                </section>                 
+            </section>
+
+            
+            <br>
+
+        </section>
+          
+        
+        <footer class="mainFooter">
+            <div class="container mainFooterContainer"></div>
+                <h3 class="sectionHeader">Footer</h3>
+                <ul class="nav footerNav">
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Cerberus" target = "_blank">
+                            <!-- "target = "_blank" " creates new tab to href site when user clicks icon-->
+                            <img src = "Images/Mass Effect Logo C.png" width = "60" height = "100">
+                        </a> 
+                    </li>
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Systems_Alliance" target = "_blank">
+                            <img src = "Images/Mass Effect Logo A.png" width = "60" height = "100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Reaper" target = "_blank">
+                            <img src = "Images/Mass Effect Logo R.png" width = "60" height = "100">
+                        </a>
+                    </li>
+
+                </ul>
+        </footer>
+    </body>
+</html>

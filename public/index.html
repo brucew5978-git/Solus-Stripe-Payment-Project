@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solus M.D. | Locations</title>
+        <!-- "title" creates title for the page -->
+
+        <meta name="description" content="This is the description">
+        <!-- "meta tag" shows up underneeth title of page-->
+
+        <link rel = "stylesheet" href = "styles.css">
+    </head>
+    <body>
+        <header class="mainHeader">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="http://localhost:3000/store">STORE</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <!-- "li" are points, they are styled with bullet points in ul and numbers in ordered lists-->
+                </ul>
+                <!-- "ul" is Unordered List. As the home and other buttons do not need to be in any order, ul is used-->
+            </nav>
+            <!-- "nav" is Navigation bar-->
+            <!-- <hr> -->
+            <!-- Used for horizontal elements--> 
+            <h1 class="titleName titleNameLarge">Mordin Solus M.D.</h1>
+            <!-- "h1" is a type of header. For ex, "h2" would show up with smaller texts than "h1"-->
+            <div class="container">
+                <button class="btn btnHeader" type="button">Button</button>
+                <!-- "button" creates clickable button on html page--> 
+            </div>
+            <!-- "div container" allows button to be have same characteristic as "container"-->
+
+            <!-- "br" creates a line break -->
+
+            <!-- *Put backround image -->
+            <button class="btn btnHeader btnPlay" type="button">&#9658;</button>
+            <!-- "&#9658" creates a play button. 
+                Note: &lt is equal to "<"
+            -->
+            
+        </header>
+        
+        <Section class="locationBackground">
+            <div class="contentSection container">
+                <h2 class="sectionHeader">LOCATIONS</h2>
+                <div>
+                    <div class="clinicRow">
+                        <!-- <strong class="clinicItem clinicLocation">Tuchanka</strong> -->
+                        <!-- "strong" bolds the text visually and indicates that it is important-->
+                        
+                        <span class="clinicItem clinicLocation">Tuchanka</span>
+                        
+                        <!--&lt;&gt; -->
+                        <!-- "<>" symbols (or "&lt;&gt") are used to create space between elements-->
+
+                        <span class="clinicItem clinicStarCluster">Krogan DMZ</span>
+                        <!-- "span" allows for text to continue on one line-->
+                        <!-- &lt;&gt; -->
+
+                        <span class="clinicItem clinicType">Experimental clinic</span>
+                        <!-- &lt;&gt; -->
+                        
+                        <button type = "button" class="btn clinicItem clinicButton
+                                                    btnPrimary">Book Appointment</button>
+                        <!-- "button type" allows for unique distinguished buttons, mostly used in CSS-->
+                        <!-- &lt;&gt; -->
+
+                        <!-- <hr> -->
+                        <!-- "hr" creates underline-->
+                    </div>
+                    <div class="clinicRow">
+                        <!-- <strong>Omega</strong> -->
+                        
+                        <span class="clinicItem clinicLocation">Omega</span>
+
+                        <span class="clinicItem clinicStarCluster">Omega Nebula</span>
+
+                        <span class="clinicItem clinicType">Medical clinic</span>
+                        <button type = "button" class="btn clinicItem clinicButton
+                                                        btnPrimary">Book Appointment</button>
+                    </div>
+                    <div class="clinicRow">
+                        <!-- <strong>Surkesh</strong> -->
+
+                        <span class="clinicItem clinicLocation">Sur'kesh</span>
+
+                        <span class="clinicItem clinicStarCluster">Annos Basin</span>
+
+                        <span class="clinicItem clinicType">Medical clinic / Research </span>
+
+                        <button type = "button" class="btn clinicItem clinicButton
+                                                        btnPrimary">Book Appointment</button>
+
+                    </div>
+                </div>
+                <!-- "div" creates a general class that can be used for anything -->  
+            </div>
+            
+        </Section>
+        <footer class="mainFooter">
+            <div class="container mainFooterContainer"></div>
+                <h3 class="sectionHeader">Footer</h3>
+                <ul class="nav footerNav">
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Cerberus" target = "_blank">
+                            <!-- "target = "_blank" " creates new tab to href site when user clicks icon-->
+                            <img src = "Images/Mass Effect Logo C.png" width = "60" height = "100">
+                        </a> 
+                    </li>
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Systems_Alliance" target = "_blank">
+                            <img src = "Images/Mass Effect Logo A.png" width = "60" height = "100">
+                        </a>
+                    </li>
+                    <li>
+                        <a href = "https://masseffect.fandom.com/wiki/Reaper" target = "_blank">
+                            <img src = "Images/Mass Effect Logo R.png" width = "60" height = "100">
+                        </a>
+                    </li>
+
+                </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+{
+
+"medical_supplies": [
+    {
+        "id": 1,
+        "name": "Medi-Gel",
+        "price": 50,
+        "imgName": "Mass Effect Medi-Gel 2.png"
+    },
+    {
+        "id": 2,
+        "name": "STG Research Data",
+        "price": 100000,
+        "imgName": "Mass Effect Datapad.jpg"
+    }
+],
+
+"general_supplies": [
+    {
+        "id": 3,
+        "name": "Thermal Clips",
+        "price": 500,
+        "imgName": "Mass Effect Thermal Clip 2.png"
+    },
+    {
+        "id": 4,
+        "name": "M-5 Phalanx",
+        "price": 10000,
+        "imgName": "Mass Effect M-3 Phalanx.png"
+    }
+]
+}
